@@ -21,6 +21,13 @@
       </geometry>
     </collision>
   </link>
+  <link name="root_link_imu_frame"/>
+  <joint name="root_link_imu_frame_fixed_joint" type="fixed">
+    <origin xyz="0.085155 -0.011 -0.112309" rpy="-2.09439521059 0 -1.57079632679"/>
+    <parent link="root_link"/>
+    <child link="root_link_imu_frame"/>
+    <dynamics damping="0.1"/>
+  </joint>
   <link name="r_hip_1">
     <inertial>
       <origin xyz="-0.0005145 -0.0380753 -7.1e-05" rpy="1.57079632679 0 1.57079632679"/>
