@@ -21,6 +21,13 @@
       </geometry>
     </collision>
   </link>
+  <link name="root_link_imu_frame"/>
+  <joint name="root_link_imu_frame_fixed_joint" type="fixed">
+    <origin xyz="0.085155 -0.011 -0.112309" rpy="-2.09439521059 0 -1.57079632679"/>
+    <parent link="root_link"/>
+    <child link="root_link_imu_frame"/>
+    <dynamics damping="0.1"/>
+  </joint>
   <link name="r_hip_1">
     <inertial>
       <origin xyz="-0.0005145 -0.0380753 -7.1e-05" rpy="1.57079632679 0 1.57079632679"/>
@@ -2516,7 +2523,7 @@
     <origin rpy="-1.57079632679 1.57079632679 0.0" xyz="0.00950000019074 0.133444 0.0093"/>
   </sensor>
   <gazebo reference="root_link">
-    <sensor name="root_link_ems_acc_eb5" type="imu">
+  <sensor name="root_link_ems_acc_eb5" type="imu">
       <always_on>1</always_on>
       <update_rate>100</update_rate>
       <pose>0.0493308 -0.0125771 -0.115691 -3.14159265359 1.29154404503 3.14159265359</pose>
@@ -3290,6 +3297,16 @@
       <update_rate>100</update_rate>
       <pose>0.0805274 0.0118122 -0.001215 0.0 -0.0 1.57079632679</pose>
       <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
+    </sensor>
+  </gazebo>
+  <gazebo reference="root_link">
+    <sensor name="root_link_imu_acc" type="imu">
+      <always_on>1</always_on>
+      <update_rate>400</update_rate>
+      <pose>0.085155 -0.011 -0.112309 -2.09439521059 -3.88578058619e-16 -1.57079632679</pose>
+      <plugin name="root_link_xsens_imu_plugin" filename="libgazebo_yarp_imu.so">
+    <yarpConfigurationFile>model://iCub/conf/gazebo_icub_xsens_inertial.ini</yarpConfigurationFile>
+</plugin>
     </sensor>
   </gazebo>
   <sensor name="l_foot_mtb_acc_10b13" type="accelerometer">
