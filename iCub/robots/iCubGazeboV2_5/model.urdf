@@ -2995,9 +2995,6 @@
       <update_rate>100</update_rate>
       <pose>0.04351373 0.0138396 -0.092765 -3.14159265359 -1.35262978345 -8.47684971046e-16</pose>
       <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
-      <plugin name="right_foot_ft_imu_plugin" filename="libgazebo_yarp_imu.so">
-        <yarpConfigurationFile>model://iCub/conf/gazebo_icub_right_foot_inertial.ini</yarpConfigurationFile>
-      </plugin>
     </sensor>
   </gazebo>
   <sensor name="r_lower_leg_ems_acc_eb9" type="accelerometer">
@@ -3223,9 +3220,6 @@
       <update_rate>100</update_rate>
       <pose>0.04351373 0.0113146 -0.092765 -3.14159265359 -1.35262978345 -8.47684971046e-16</pose>
       <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
-      <plugin name="left_foot_ft_imu_plugin" filename="libgazebo_yarp_imu.so">
-        <yarpConfigurationFile>model://iCub/conf/gazebo_icub_left_foot_inertial.ini</yarpConfigurationFile>
-      </plugin>
     </sensor>
   </gazebo>
   <sensor name="l_lower_leg_ems_acc_eb7" type="accelerometer">
