@@ -2967,6 +2967,94 @@
     <parent link="root_link"/>
     <origin rpy="-2.09439521059 -3.88578058619e-16 -1.57079632679" xyz="0.085155 -0.011 -0.112309"/>
   </sensor>
+  <gazebo reference="r_hip_2">
+  <sensor name="r_upper_leg_ft_acc_3b11" type="imu">
+    <always_on>1</always_on>
+    <update_rate>100</update_rate>
+    <pose>0.0065638 -0.0085861 -0.059282 -2.22044604925e-16 2.22044604925e-16 1.57079632679</pose>
+  </sensor>
+</gazebo>
+<sensor name="r_upper_leg_ft_acc_3b11" type="accelerometer">
+  <parent link="r_hip_2"/>
+  <origin rpy="-2.22044604925e-16 2.22044604925e-16 1.57079632679" xyz="0.0065638 -0.0085861 -0.059282"/>
+</sensor>
+<gazebo reference="r_hip_2">
+  <sensor name="r_upper_leg_ft_gyro_3b11" type="imu">
+    <always_on>1</always_on>
+    <update_rate>100</update_rate>
+    <pose>0.0065638 -0.0085861 -0.059282 -2.22044604925e-16 2.22044604925e-16 1.57079632679</pose>
+  </sensor>
+</gazebo>
+<sensor name="r_upper_leg_ft_gyro_3b11" type="gyroscope">
+  <parent link="r_hip_2"/>
+  <origin rpy="-2.22044604925e-16 2.22044604925e-16 1.57079632679" xyz="0.0065638 -0.0085861 -0.059282"/>
+</sensor>
+<gazebo reference="r_ankle_2">
+  <sensor name="r_foot_ft_acc_3b14" type="imu">
+    <always_on>1</always_on>
+    <update_rate>100</update_rate>
+    <pose>0.0040001 -0.0086 -0.045282 -2.22044604925e-16 2.22044604925e-16 1.57079632679</pose>
+  </sensor>
+</gazebo>
+<sensor name="r_foot_ft_acc_3b14" type="accelerometer">
+  <parent link="r_ankle_2"/>
+  <origin rpy="-2.22044604925e-16 2.22044604925e-16 1.57079632679" xyz="0.0040001 -0.0086 -0.045282"/>
+</sensor>
+<gazebo reference="r_ankle_2">
+  <sensor name="r_foot_ft_gyro_3b14" type="imu">
+    <always_on>1</always_on>
+    <update_rate>100</update_rate>
+    <pose>0.0040001 -0.0086 -0.045282 -2.22044604925e-16 2.22044604925e-16 1.57079632679</pose>
+  </sensor>
+</gazebo>
+<sensor name="r_foot_ft_gyro_3b14" type="gyroscope">
+  <parent link="r_ankle_2"/>
+  <origin rpy="-2.22044604925e-16 2.22044604925e-16 1.57079632679" xyz="0.0040001 -0.0086 -0.045282"/>
+</sensor>
+<gazebo reference="l_hip_2">
+  <sensor name="l_upper_leg_ft_acc_3b12" type="imu">
+    <always_on>1</always_on>
+    <update_rate>100</update_rate>
+    <pose>0.00667 -0.0085248 -0.059282 -2.22044604925e-16 2.22044604925e-16 1.57079632679</pose>
+  </sensor>
+</gazebo>
+<sensor name="l_upper_leg_ft_acc_3b12" type="accelerometer">
+  <parent link="l_hip_2"/>
+  <origin rpy="-2.22044604925e-16 2.22044604925e-16 1.57079632679" xyz="0.00667 -0.0085248 -0.059282"/>
+</sensor>
+<gazebo reference="l_hip_2">
+  <sensor name="l_upper_leg_ft_gyro_3b12" type="imu">
+    <always_on>1</always_on>
+    <update_rate>100</update_rate>
+    <pose>0.00667 -0.0085248 -0.059282 -2.22044604925e-16 2.22044604925e-16 1.57079632679</pose>
+  </sensor>
+</gazebo>
+<sensor name="l_upper_leg_ft_gyro_3b12" type="gyroscope">
+  <parent link="l_hip_2"/>
+  <origin rpy="-2.22044604925e-16 2.22044604925e-16 1.57079632679" xyz="0.00667 -0.0085248 -0.059282"/>
+</sensor>
+<gazebo reference="l_ankle_2">
+  <sensor name="l_foot_ft_acc_3b13" type="imu">
+    <always_on>1</always_on>
+    <update_rate>100</update_rate>
+    <pose>0.0040002 -0.0086 -0.045282 -2.22044604925e-16 2.22044604925e-16 1.57079632679</pose>
+  </sensor>
+</gazebo>
+<sensor name="l_foot_ft_acc_3b13" type="accelerometer">
+  <parent link="l_ankle_2"/>
+  <origin rpy="-2.22044604925e-16 2.22044604925e-16 1.57079632679" xyz="0.0040002 -0.0086 -0.045282"/>
+</sensor>
+<gazebo reference="l_ankle_2">
+  <sensor name="l_foot_ft_gyro_3b13" type="imu">
+    <always_on>1</always_on>
+    <update_rate>100</update_rate>
+    <pose>0.0040002 -0.0086 -0.045282 -2.22044604925e-16 2.22044604925e-16 1.57079632679</pose>
+  </sensor>
+</gazebo>
+<sensor name="l_foot_ft_gyro_3b13" type="gyroscope">
+  <parent link="l_ankle_2"/>
+  <origin rpy="-2.22044604925e-16 2.22044604925e-16 1.57079632679" xyz="0.0040002 -0.0086 -0.045282"/>
+</sensor>
   <gazebo>
     <pose>0.0 0.0 0.63 0.0 0.0 3.14</pose>
   </gazebo>
