@@ -3350,6 +3350,9 @@
     <always_on>1</always_on>
     <update_rate>100</update_rate>
     <pose>0.0040001 -0.0086 -0.045282 -2.22044604925e-16 2.22044604925e-16 1.57079632679</pose>
+    <plugin name="r_foot_ft_imu_plugin" filename="libgazebo_yarp_imu.so">
+        <yarpConfigurationFile>model://iCub/conf/gazebo_icub_right_foot_inertial.ini</yarpConfigurationFile>
+  </plugin>
   </sensor>
 </gazebo>
 <sensor name="r_foot_ft_acc_3b14" type="accelerometer">
@@ -3394,6 +3397,9 @@
     <always_on>1</always_on>
     <update_rate>100</update_rate>
     <pose>0.0040002 -0.0086 -0.045282 -2.22044604925e-16 2.22044604925e-16 1.57079632679</pose>
+    <plugin name="r_foot_ft_imu_plugin" filename="libgazebo_yarp_imu.so">
+        <yarpConfigurationFile>model://iCub/conf/gazebo_icub_left_foot_inertial.ini</yarpConfigurationFile>
+  </plugin>
   </sensor>
 </gazebo>
 <sensor name="l_foot_ft_acc_3b13" type="accelerometer">
