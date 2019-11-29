@@ -3323,7 +3323,6 @@
     <parent link="l_foot"/>
     <origin rpy="0.0 -0.0 1.57079632679" xyz="0.0805274 0.0118122 -0.001215"/>
   </sensor>
-  <gazebo>
   <gazebo reference="r_hip_2">
   <sensor name="r_upper_leg_ft_acc_3b11" type="imu">
     <always_on>1</always_on>
@@ -3412,6 +3411,7 @@
   <parent link="l_ankle_2"/>
   <origin rpy="-2.22044604925e-16 2.22044604925e-16 1.57079632679" xyz="0.0040002 -0.0086 -0.045282"/>
 </sensor>
+  <gazebo>
     <pose>0.0 0.0 0.63 0.0 0.0 3.14</pose>
   </gazebo>
 </robot>
