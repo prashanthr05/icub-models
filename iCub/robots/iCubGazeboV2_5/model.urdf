@@ -2295,7 +2295,13 @@
    <yarpConfigurationFile>model://iCub/conf/gazebo_icub_wholebody_ros.ini</yarpConfigurationFile>
 </plugin>
 <plugin name="base_state" filename="libgazebo_yarp_basestate.so">
+   <yarpConfigurationFile>model://iCub/conf/gazebo_icub_lfoot_state.ini</yarpConfigurationFile>
+</plugin>
+<plugin name="lfoot_state" filename="libgazebo_yarp_basestate.so">
    <yarpConfigurationFile>model://iCub/conf/gazebo_icub_base_state.ini</yarpConfigurationFile>
+</plugin>
+<plugin name="rfoot_state" filename="libgazebo_yarp_basestate.so">
+   <yarpConfigurationFile>model://iCub/conf/gazebo_icub_rfoot_state.ini</yarpConfigurationFile>
 </plugin>
 </gazebo>
   <gazebo reference="r_hip_pitch">
@@ -3308,7 +3314,7 @@
   <gazebo reference="root_link">
     <sensor name="root_link_imu_acc" type="imu">
       <always_on>1</always_on>
-      <update_rate>400</update_rate>
+      <update_rate>100</update_rate>
       <pose>0.085155 -0.011 -0.112309 -2.09439521059 -3.88578058619e-16 -1.57079632679</pose>
       <plugin name="root_link_xsens_imu_plugin" filename="libgazebo_yarp_imu.so">
     <yarpConfigurationFile>model://iCub/conf/gazebo_icub_xsens_inertial.ini</yarpConfigurationFile>
