@@ -2225,7 +2225,14 @@
   <disableFixedJointLumping>true</disableFixedJointLumping>
 </gazebo>
   <gazebo reference="l_foot">
-  <collision> <surface> <bounce>
+  <collision name="l_foot_collision"> 
+    <pose>0.03 0.005 -0.014 0.0 0.0 0.0</pose>
+    <geometry>
+      <box> 
+        <size>0.16 0.072 0.001</size>
+      </box>
+    </geometry>
+  <surface> <bounce>    
     <restitution_coefficient>0</restitution_coefficient>
     <threshold>100000</threshold>
   </bounce> </surface> </collision>
@@ -2239,7 +2246,14 @@
   <fdir1>0 0 0</fdir1>
 </gazebo>
   <gazebo reference="r_foot">
-  <collision> <surface> <bounce>
+  <collision name="r_foot_collision"> 
+  <pose>0.03 0.005 0.014 0.0 0.0 0.0</pose>
+    <geometry>
+      <box> 
+        <size>0.16 0.072 0.001</size>
+      </box>
+    </geometry>
+  <surface> <bounce>    
     <restitution_coefficient>0</restitution_coefficient>
     <threshold>100000</threshold>
   </bounce> </surface> </collision>
@@ -2302,6 +2316,9 @@
 </plugin>
 <plugin name="rfoot_state" filename="libgazebo_yarp_basestate.so">
    <yarpConfigurationFile>model://iCub/conf/gazebo_icub_rfoot_state.ini</yarpConfigurationFile>
+</plugin>
+<plugin name="wholebodydynamics_sim" filename="libgazebo_yarp_contactforcetorques.so">
+      <yarpConfigurationFile>model://iCub/conf/gazebo_icub_contactforcetorques.ini</yarpConfigurationFile>
 </plugin>
 </gazebo>
   <gazebo reference="r_hip_pitch">
@@ -2471,7 +2488,7 @@
       <plugin name="right_foot_ft_plugin" filename="libgazebo_yarp_forcetorque.so">
   <yarpConfigurationFile>model://iCub/conf/FT/gazebo_icub_right_foot_ft.ini</yarpConfigurationFile>
 </plugin>
-    </sensor>
+    </sensor>    
   </gazebo>
   <sensor name="r_foot_ft_sensor" type="force_torque">
     <parent joint="r_foot_ft_sensor"/>
@@ -3417,6 +3434,20 @@
   <parent link="l_ankle_2"/>
   <origin rpy="-2.22044604925e-16 2.22044604925e-16 1.57079632679" xyz="0.0040002 -0.0086 -0.045282"/>
 </sensor>
+<gazebo reference="r_foot">
+  <sensor name="r_foot_contact_sensor" type="contact">
+    <contact>
+      <collision>r_foot_collision</collision>
+    </contact>
+  </sensor>
+</gazebo>
+<gazebo reference="l_foot">
+  <sensor name="l_foot_contact_sensor" type="contact">
+    <contact>
+      <collision>l_foot_collision</collision>
+    </contact>
+  </sensor>
+</gazebo>
   <gazebo>
     <pose>0.0 0.0 0.63 0.0 0.0 3.14</pose>
   </gazebo>
