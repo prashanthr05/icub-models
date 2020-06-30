@@ -3328,7 +3328,7 @@
       <plugin name="iCub_yarp_gazebo_plugin_ACC" filename="libgazebo_yarp_inertial.so"/>
     </sensor>
   </gazebo>
-  <gazebo reference="root_link">
+  <gazebo reference="base_link">
     <sensor name="root_link_imu_acc" type="imu">
       <always_on>1</always_on>
       <update_rate>100</update_rate>
