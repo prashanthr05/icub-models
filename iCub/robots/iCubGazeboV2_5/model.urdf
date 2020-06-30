@@ -2236,7 +2236,7 @@
     <restitution_coefficient>0</restitution_coefficient>
     <threshold>100000</threshold>
   </bounce> </surface> </collision>
-  <maxContacts>4</maxContacts>
+  <max_contacts>4</max_contacts>
   <kp>18000000</kp>
   <kd>100</kd>
   <maxVel>100</maxVel>
@@ -2257,7 +2257,7 @@
     <restitution_coefficient>0</restitution_coefficient>
     <threshold>100000</threshold>
   </bounce> </surface> </collision>
-  <maxContacts>4</maxContacts>
+  <max_contacts>4</max_contacts>
   <kp>18000000</kp>
   <kd>100</kd>
   <maxVel>100</maxVel>
