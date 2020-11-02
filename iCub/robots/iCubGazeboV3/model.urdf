@@ -1679,4 +1679,9 @@
     <parent link="head"/>
     <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
   </sensor>
+  <gazebo>
+    <plugin name="controlboard_wholebody_ros_nohands" filename="libgazebo_yarp_controlboard.so">
+        <yarpConfigurationFile>model://iCub/conf_icub3/gazebo_icub_wholebody_ros_nohands.ini</yarpConfigurationFile>
+    </plugin>
+  </gazebo>
 </robot>
