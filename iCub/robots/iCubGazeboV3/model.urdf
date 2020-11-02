@@ -1671,7 +1671,7 @@
       <update_rate>100</update_rate>
       <pose>0.0 0.0 0.0 0.0 0.0 0.0</pose>
         <plugin name="iCub_yarp_gazebo_plugin_IMU" filename="libgazebo_yarp_imu.so">
-            <yarpConfigurationFile>model://iCub/conf/gazebo_icub_inertial.ini</yarpConfigurationFile>
+            <yarpConfigurationFile>model://iCub/conf_icub3/gazebo_icub_inertial.ini</yarpConfigurationFile>
         </plugin>
     </sensor>
   </gazebo>
