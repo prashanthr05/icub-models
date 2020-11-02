@@ -850,6 +850,13 @@
       </geometry>
     </collision>
   </link>
+  <link name="imu_frame"/>
+  <joint name="imu_frame_fixed_joint" type="fixed">
+    <origin xyz="0.009500000190735 0.133444 0.009299999999999996" rpy="-1.5707963267948961 1.570796326794896 0"/>
+    <parent link="head"/>
+    <child link="imu_frame"/>
+    <dynamics damping="0.1"/>
+  </joint>  
   <joint name="r_wrist_yaw" type="continuous">
     <origin xyz="-0.016300122874272734 0.006999390051091792 0" rpy="0 0 0"/>
     <axis xyz="-2.4949582807394525e-07 1.0000002733514362 -2.7942487010105877e-08"/>
@@ -1658,4 +1665,18 @@
   <gazebo>
     <pose>0.0 0.0 0.8 0.0 0.0 0.0</pose>
   </gazebo>
+  <gazebo reference="head">
+    <sensor name="head_imu_acc_1x1" type="imu">
+      <always_on>1</always_on>
+      <update_rate>100</update_rate>
+      <pose>0.0 0.0 0.0 0.0 0.0 0.0</pose>
+        <plugin name="iCub_yarp_gazebo_plugin_IMU" filename="libgazebo_yarp_imu.so">
+            <yarpConfigurationFile>model://iCub/conf/gazebo_icub_inertial.ini</yarpConfigurationFile>
+        </plugin>
+    </sensor>
+  </gazebo>
+  <sensor name="head_imu_acc_1x1" type="accelerometer">
+    <parent link="head"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+  </sensor>
 </robot>
